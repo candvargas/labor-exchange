@@ -1,18 +1,15 @@
 package com.poligran.ingsoftware.laborexchange.entities;
 
-import lombok.*;
-import org.springframework.data.annotation.Id;
+
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-@Builder
-@Table("offers")
-public class Offer {
-    @Id
+@Table("vw_full_offers")
+public class VWFullOffers {
     private Long id;
 
     private String name;
@@ -20,13 +17,22 @@ public class Offer {
     private String description;
 
     @Column("city_id")
-    private Integer city;
+    private Integer cityId;
+
+    @Column("city_name")
+    private String cityName;
 
     private int salary;
 
     @Column("offer_type_id")
-    private Integer offerType;
+    private Integer offerTypeId;
+
+    @Column("offer_type_name")
+    private String offerTypeName;
 
     @Column("contract_type_id")
-    private Integer contractType;
+    private Integer contractTypeId;
+
+    @Column("contract_type_name")
+    private String contractTypeName;
 }

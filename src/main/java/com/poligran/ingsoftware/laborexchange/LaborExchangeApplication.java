@@ -12,7 +12,7 @@ public class LaborExchangeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LaborExchangeApplication.class, args);
-		log.info("We are ready!!");
+		log.info("Labor-exchange-app ready!!");
 	}
 
 }

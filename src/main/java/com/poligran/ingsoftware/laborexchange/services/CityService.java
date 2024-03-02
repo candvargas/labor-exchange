@@ -2,15 +2,15 @@ package com.poligran.ingsoftware.laborexchange.services;
 
 import com.poligran.ingsoftware.laborexchange.entities.City;
 import com.poligran.ingsoftware.laborexchange.repository.CityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class CityService {
-    @Autowired
-    CityRepository cityRepository;
+    private final CityRepository cityRepository;
 
     public Flux<City> findAll() {
         return cityRepository.findAll();
